@@ -1,3 +1,70 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes preciseFloat1 {
+  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+  33% { transform: translateY(-8px) translateX(5px) scale(1.1); }
+  66% { transform: translateY(3px) translateX(-3px) scale(0.95); }
+}
+
+@keyframes preciseFloat2 {
+  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+  50% { transform: translateY(10px) translateX(-6px) scale(1.05); }
+}
+
+@keyframes preciseFloat3 {
+  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+  40% { transform: translateY(-12px) translateX(-8px) scale(0.9); }
+  80% { transform: translateY(5px) translateX(4px) scale(1.15); }
+}
+
+@keyframes preciseFloat4 {
+  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+  25% { transform: translateY(6px) translateX(10px) scale(1.1); }
+  75% { transform: translateY(-4px) translateX(-5px) scale(0.95); }
+}
+
+@keyframes preciseFloat5 {
+  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+  60% { transform: translateY(-15px) translateX(-2px) scale(1.2); }
+}
+
+@keyframes preciseFloat6 {
+  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+  45% { transform: translateY(8px) translateX(7px) scale(0.85); }
+  90% { transform: translateY(-3px) translateX(-4px) scale(1.1); }
+}
+
+@keyframes preciseFloat7 {
+  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+  30% { transform: translateY(-6px) translateX(9px) scale(1.05); }
+  70% { transform: translateY(4px) translateX(-7px) scale(0.9); }
+}
+
+@keyframes preciseDataFlow {
+  0% { 
+    background: linear-gradient(90deg, transparent, transparent, transparent);
+    filter: blur(0px);
+  }
+  20% { 
+    background: linear-gradient(90deg, transparent, #60a5fa, transparent);
+    filter: blur(0px);
+  }
+  40% { 
+    background: linear-gradient(90deg, #60a5fa, #34d399, #60a5fa);
+    filter: blur(1px);
+  }
+  60% { 
+    background: linear-gradient(90deg, #34d399, #a78bfa, #34d399);
+    filter: blur(0px);
+  }
+  80% { 
+    background: linear-gradient(90deg, transparent, #a78bfa, transparent);
+    filter: blur(0px);
+  }
+  100% { 
+    background: linear-gradient(90deg, transparent, transparent, transparent);
+    filter: blur(0px);
+  }
+}

@@ -92,7 +92,7 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <div className="mb-6">
-              <h2 className="text-3xl font-bold bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text">
                 Seculinx
               </h2>
               <p className="text-gray-300 mt-4 leading-relaxed">
@@ -106,13 +106,14 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-primary-400" />
                 <span>hello@seculinx.com</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
+              {/* Uncomment if phone number is needed */}
+              {/* <div className="flex items-center space-x-3 text-gray-300">
                 <Phone className="w-5 h-5 text-primary-400" />
-                <span>+1 (555) 123-4567</span>
-              </div>
+                <span>+91 6376-405526</span>
+              </div> */}
               <div className="flex items-center space-x-3 text-gray-300">
                 <MapPin className="w-5 h-5 text-primary-400" />
-                <span>San Francisco, CA</span>
+                <span> India </span>
               </div>
             </div>
 

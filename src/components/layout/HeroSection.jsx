@@ -1,6 +1,164 @@
 // src/components/layout/HeroSection.jsx
 import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
+import { useState, useEffect } from 'react';
+
+const ParticleHouseAnimation = () => {
+  const [isFormed, setIsFormed] = useState(false);
+
+return (
+  <div 
+    className="relative w-48 h-40"
+    onMouseEnter={() => setIsFormed(true)}
+    onMouseLeave={() => setIsFormed(false)}
+  >
+      {/* Particle System */}
+      <div className={`relative w-full h-full transition-all duration-[2500ms] ease-out ${isFormed ? 'formed' : ''}`}>
+        {/* Particles */}
+        <div className={`absolute w-2.5 h-2.5 rounded-full transition-all duration-[2500ms] ease-out ${
+          isFormed ? 'top-[45px] left-[50px]' : 'top-[25px] left-[20px]'
+        }`} 
+        style={{
+          background: 'radial-gradient(circle, #60a5fa, #3b82f6)',
+          boxShadow: isFormed ? '0 0 20px rgba(59, 130, 246, 0.8)' : '0 0 15px rgba(59, 130, 246, 0.6)',
+          animation: !isFormed ? 'preciseFloat1 3.5s infinite ease-in-out' : 'none'
+        }} />
+        
+        <div className={`absolute w-2.5 h-2.5 rounded-full transition-all duration-[2500ms] ease-out ${
+          isFormed ? 'top-[25px] left-[100px]' : 'top-[90px] left-[15px]'
+        }`}
+        style={{
+          background: 'radial-gradient(circle, #34d399, #10b981)',
+          boxShadow: isFormed ? '0 0 20px rgba(16, 185, 129, 0.8)' : '0 0 15px rgba(16, 185, 129, 0.6)',
+          animation: !isFormed ? 'preciseFloat2 4s infinite ease-in-out' : 'none'
+        }} />
+        
+        <div className={`absolute w-2.5 h-2.5 rounded-full transition-all duration-[2500ms] ease-out ${
+          isFormed ? 'top-[45px] left-[150px]' : 'top-[45px] left-[170px]'
+        }`}
+        style={{
+          background: 'radial-gradient(circle, #a78bfa, #8b5cf6)',
+          boxShadow: isFormed ? '0 0 20px rgba(139, 92, 246, 0.8)' : '0 0 15px rgba(139, 92, 246, 0.6)',
+          animation: !isFormed ? 'preciseFloat3 3.2s infinite ease-in-out' : 'none'
+        }} />
+        
+        <div className={`absolute w-2.5 h-2.5 rounded-full transition-all duration-[2500ms] ease-out ${
+          isFormed ? 'top-[85px] left-[50px]' : 'top-[130px] left-[175px]'
+        }`}
+        style={{
+          background: 'radial-gradient(circle, #fbbf24, #f59e0b)',
+          boxShadow: isFormed ? '0 0 20px rgba(245, 158, 11, 0.8)' : '0 0 15px rgba(245, 158, 11, 0.6)',
+          animation: !isFormed ? 'preciseFloat4 3.8s infinite ease-in-out' : 'none'
+        }} />
+        
+        <div className={`absolute w-2.5 h-2.5 rounded-full transition-all duration-[2500ms] ease-out ${
+          isFormed ? 'top-[85px] left-[150px]' : 'top-[70px] left-[95px]'
+        }`}
+        style={{
+          background: 'radial-gradient(circle, #f87171, #ef4444)',
+          boxShadow: isFormed ? '0 0 20px rgba(239, 68, 68, 0.8)' : '0 0 15px rgba(239, 68, 68, 0.6)',
+          animation: !isFormed ? 'preciseFloat5 3.6s infinite ease-in-out' : 'none'
+        }} />
+        
+        <div className={`absolute w-2.5 h-2.5 rounded-full transition-all duration-[2500ms] ease-out ${
+          isFormed ? 'top-[125px] left-[50px]' : 'top-[150px] left-[50px]'
+        }`}
+        style={{
+          background: 'radial-gradient(circle, #38bdf8, #06b6d4)',
+          boxShadow: isFormed ? '0 0 20px rgba(6, 182, 212, 0.8)' : '0 0 15px rgba(6, 182, 212, 0.6)',
+          animation: !isFormed ? 'preciseFloat6 4.1s infinite ease-in-out' : 'none'
+        }} />
+        
+        <div className={`absolute w-2.5 h-2.5 rounded-full transition-all duration-[2500ms] ease-out ${
+          isFormed ? 'top-[125px] left-[150px]' : 'top-[110px] left-[130px]'
+        }`}
+        style={{
+          background: 'radial-gradient(circle, #a3e635, #84cc16)',
+          boxShadow: isFormed ? '0 0 20px rgba(132, 204, 22, 0.8)' : '0 0 15px rgba(132, 204, 22, 0.6)',
+          animation: !isFormed ? 'preciseFloat7 3.7s infinite ease-in-out' : 'none'
+        }} />
+
+        {/* Neural Connections */}
+        <div className={`absolute h-0.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent rounded-sm transition-all duration-[1500ms] ease-in-out ${
+          isFormed ? 'opacity-100' : 'opacity-0'
+        }`}
+        style={{
+          top: '35px',
+          left: '52px',
+          width: '47px',
+          transform: 'rotate(-20deg)',
+          animation: isFormed ? 'preciseDataFlow 2.5s infinite ease-in-out' : 'none'
+        }} />
+        
+        <div className={`absolute h-0.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent rounded-sm transition-all duration-[1500ms] ease-in-out ${
+          isFormed ? 'opacity-100' : 'opacity-0'
+        }`}
+        style={{
+          top: '35px',
+          left: '105px',
+          width: '46px',
+          transform: 'rotate(20deg)',
+          animation: isFormed ? 'preciseDataFlow 2.5s infinite ease-in-out 0.3s' : 'none'
+        }} />
+        
+        <div className={`absolute h-0.5 bg-gradient-to-r from-transparent via-green-400 to-transparent rounded-sm transition-all duration-[1500ms] ease-in-out ${
+          isFormed ? 'opacity-100' : 'opacity-0'
+        }`}
+        style={{
+          top: '69px',
+          left: '39px',
+          width: '31px',
+          transform: 'rotate(90deg)',
+          animation: isFormed ? 'preciseDataFlow 2.5s infinite ease-in-out 0.6s' : 'none'
+        }} />
+        
+        <div className={`absolute h-0.5 bg-gradient-to-r from-transparent via-green-400 to-transparent rounded-sm transition-all duration-[1500ms] ease-in-out ${
+          isFormed ? 'opacity-100' : 'opacity-0'
+        }`}
+        style={{
+          top: '69px',
+          left: '140px',
+          width: '31px',
+          transform: 'rotate(90deg)',
+          animation: isFormed ? 'preciseDataFlow 2.5s infinite ease-in-out 0.9s' : 'none'
+        }} />
+        
+        <div className={`absolute h-0.5 bg-gradient-to-r from-transparent via-purple-400 to-transparent rounded-sm transition-all duration-[1500ms] ease-in-out ${
+          isFormed ? 'opacity-100' : 'opacity-0'
+        }`}
+        style={{
+          top: '110px',
+          left: '39px',
+          width: '31px',
+          transform: 'rotate(90deg)',
+          animation: isFormed ? 'preciseDataFlow 2.5s infinite ease-in-out 1.2s' : 'none'
+        }} />
+        
+        <div className={`absolute h-0.5 bg-gradient-to-r from-transparent via-purple-400 to-transparent rounded-sm transition-all duration-[1500ms] ease-in-out ${
+          isFormed ? 'opacity-100' : 'opacity-0'
+        }`}
+        style={{
+          top: '110px',
+          left: '140px',
+          width: '31px',
+          transform: 'rotate(90deg)',
+          animation: isFormed ? 'preciseDataFlow 2.5s infinite ease-in-out 1.5s' : 'none'
+        }} />
+        
+        <div className={`absolute h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent rounded-sm transition-all duration-[1500ms] ease-in-out ${
+          isFormed ? 'opacity-100' : 'opacity-0'
+        }`}
+        style={{
+          top: '130px',
+          left: '55px',
+          width: '100px',
+          transform: 'rotate(0deg)',
+          animation: isFormed ? 'preciseDataFlow 2.5s infinite ease-in-out 1.8s' : 'none'
+        }} />
+      </div>
+    </div>
+  );
+};
 
 const HeroSection = () => {
   return (
@@ -103,8 +261,8 @@ const HeroSection = () => {
               {/* Smart Home Mockup */}
               <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center relative overflow-hidden">
                 {/* Room illustration placeholder */}
-                <div className="text-6xl text-gray-400">🏠</div>
-                
+                <ParticleHouseAnimation />
+
                 {/* Floating smart indicators */}
                 <motion.div
                   className="absolute top-4 left-4 w-3 h-3 bg-green-400 rounded-full"
