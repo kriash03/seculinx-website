@@ -1,0 +1,55 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+# SPA redirect rules (already have this in _redirects, but backup)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Speed optimizations
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+  canonical_urls = false
+
+[build.processing.images]
+  compress = true
+
+# Headers for better caching and speed
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache static assets aggressively  
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache HTML with shorter time
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+# Preload important resources
+[[headers]]
+  for = "/"
+  [headers.values]
+    Link = "</assets/index-*.css>; rel=preload; as=style, </assets/index-*.js>; rel=preload; as=script"

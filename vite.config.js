@@ -8,33 +8,41 @@ export default defineConfig({
   // SEO and SPA optimizations
   build: {
     // Generate source maps for better debugging
-    sourcemap: true,
+    sourcemap: false, // Disable in production for faster loading
     
-    // Optimize chunks for better caching
+    // Optimize chunks for better caching and loading
     rollupOptions: {
       output: {
         manualChunks: {
+          // Separate vendor libraries
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
           animation: ['framer-motion'],
+          // Keep Three.js separate since it's large and not used on all pages
           three: ['three', '@react-three/fiber', '@react-three/drei']
         }
+      }
+    },
+    
+    // Optimize build size
+    target: 'esnext',
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true, // Remove console.logs in production
+        drop_debugger: true
       }
     }
   },
   
-  // Essential for SPA routing - this ensures all routes serve index.html
+  // Essential for SPA routing
   preview: {
-    // This is crucial for production builds
-    // It tells the server to serve index.html for all routes
-    // so React Router can handle client-side routing
     host: true,
     port: 4173
   },
   
   // Development server configuration
   server: {
-    // This ensures dev server also handles SPA routing correctly
     historyApiFallback: true,
     host: true,
     port: 5173
