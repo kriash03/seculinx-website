@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://seculinx.com/sitemap.xml
+
+# Crawl-delay (optional - helps prevent server overload)
+Crawl-delay: 1
+
+# Block access to certain files (optional)
+Disallow: /src/
+Disallow: /*.jsx$
+Disallow: /*.js.map$

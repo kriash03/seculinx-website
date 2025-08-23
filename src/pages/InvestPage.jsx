@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, ArrowLeft, TrendingUp, Users, Globe, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/layout/Navigation';
+import SEO from '../components/SEO';
 
 const InvestPage = () => {
   const marketStats = [
@@ -52,6 +53,12 @@ const InvestPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title="Investment Opportunities - Join Seculinx's Growth | Seculinx"
+        description="Explore investment opportunities with Seculinx. Be part of the future of cybersecurity and smart home automation technology. Contact us for partnership details."
+        keywords="Seculinx investment, cybersecurity investment, smart home investment, BrightSense investment, technology startup funding"
+        canonicalUrl="https://seculinx.com/invest"
+      />
       <Navigation />
       
       {/* Hero Section */}

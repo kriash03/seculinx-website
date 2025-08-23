@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ArrowLeft, Mail, MapPin, Phone, Send } from 'lucide-react';
 import Navigation from '../components/layout/Navigation';
+import SEO from '../components/SEO';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -52,8 +53,13 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title="Contact Seculinx - Get in Touch | Seculinx"
+        description="Contact Seculinx for cybersecurity solutions, BrightSense inquiries, partnerships, or investment opportunities. Reach out to our expert team today."
+        keywords="contact Seculinx, cybersecurity consultation, BrightSense support, Seculinx partnership, technology consultation"
+        canonicalUrl="https://seculinx.com/contact"
+      />
       <Navigation />
-      
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-16">
         <div className="absolute inset-0 bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50"></div>

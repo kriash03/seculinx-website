@@ -4,6 +4,7 @@ import { ArrowRight, ArrowLeft, Zap, Brain, Leaf, Eye, Wifi, Shield } from 'luci
 import { Suspense } from 'react';
 import RoomScene from '../components/3d/RoomScene';
 import Navigation from '../components/layout/Navigation';
+import SEO from '../components/SEO';
 
 const BrightSensePage = () => {
   const features = [
@@ -71,6 +72,12 @@ const BrightSensePage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title="BrightSense - AI-Powered Smart Lighting | Seculinx"
+        description="Discover BrightSense, Seculinx's revolutionary AI-powered smart lighting system. Zone detection, activity awareness, and energy optimization for modern homes."
+        keywords="BrightSense, smart lighting, AI lighting, zone detection, energy efficient lighting, smart home automation, mmWave sensing, Seculinx"
+        canonicalUrl="https://seculinx.com/brightsense"
+      />
       <Navigation />
       
       {/* Hero Section */}

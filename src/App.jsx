@@ -10,11 +10,18 @@ import BrightSensePage from './pages/BrightSensePage';
 import InvestPage from './pages/InvestPage';
 import ContactPage from './pages/ContactPage';
 import ScrollToTop from './components/layout/ScrollToTop';
+import SEO from './components/SEO';
 
 // Homepage Component
 const HomePage = () => {
   return (
     <>
+      <SEO 
+        title="Seculinx - Advanced Security Solutions for Modern Enterprises"
+        description="Seculinx provides cutting-edge cybersecurity solutions including BrightSense AI-powered threat detection. Protect your enterprise with next-generation security technology."
+        keywords="cybersecurity, AI security, threat detection, BrightSense, enterprise security, Seculinx, smart home automation"
+        canonicalUrl="https://seculinx.com/"
+      />
       <Navigation />
       <HeroSection />
       <AboutSection />

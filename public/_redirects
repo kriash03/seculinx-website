@@ -1,0 +1,6 @@
+# Handle SPA routing - redirect all routes to index.html
+/*    /index.html   200
+
+# Specific redirects (if needed)
+/sitemap.xml  /sitemap.xml  200
+/robots.txt   /robots.txt   200
