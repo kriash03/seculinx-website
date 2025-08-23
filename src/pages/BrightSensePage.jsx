@@ -74,7 +74,7 @@ const BrightSensePage = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-12">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-cyan-50 to-blue-50"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
@@ -86,7 +86,7 @@ const BrightSensePage = () => {
               transition={{ duration: 0.6 }}
             >
               <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
-              <span className="text-sm font-medium text-gray-700">Launching Q4 2025</span>
+              <span className="text-sm font-medium text-gray-700">Launching Q1 2026</span>
             </motion.div>
 
             <motion.h1
@@ -117,7 +117,7 @@ const BrightSensePage = () => {
               adaptive brightness, and energy optimization that learns your lifestyle.
             </motion.p>
 
-            <motion.button
+            {/* <motion.button
               className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-8 py-4 rounded-full font-semibold inline-flex items-center space-x-2 shadow-xl"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -127,7 +127,7 @@ const BrightSensePage = () => {
             >
               <span>Join Waitlist</span>
               <ArrowRight className="w-5 h-5" />
-            </motion.button>
+            </motion.button> */}
           </div>
         </div>
       </section>
@@ -348,7 +348,7 @@ const BrightSensePage = () => {
       </section>
 
       {/* Waitlist CTA */}
-      <section className="py-24 bg-gradient-to-r from-emerald-500 to-cyan-500">
+      {/* <section className="py-24 bg-gradient-to-r from-emerald-500 to-cyan-500">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -357,7 +357,7 @@ const BrightSensePage = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Launching Q4 2025
+              Launching Q1 2026
             </h2>
             <p className="text-xl text-white/90 mb-8">
               Be the first to experience BrightSense. Join our waitlist for early access and exclusive updates.
@@ -384,7 +384,7 @@ const BrightSensePage = () => {
             </p>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Back to Home */}
       <div className="bg-white py-8">

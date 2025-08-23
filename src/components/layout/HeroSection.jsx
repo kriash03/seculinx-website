@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const ParticleHouseAnimation = () => {
   const [isFormed, setIsFormed] = useState(false);
@@ -161,6 +162,32 @@ return (
 };
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Navigation handlers
+  const handleProductsClick = () => {
+    if (location.pathname !== '/') {
+      // If not on homepage, navigate to homepage first, then scroll
+      navigate('/');
+      setTimeout(() => {
+        const element = document.querySelector('#products');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // If on homepage, just scroll
+      const element = document.querySelector('#products');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
+  const handleBrightSenseClick = () => {
+    navigate('/brightsense');
+  };
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background Gradient */}
@@ -226,6 +253,7 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <motion.button
+                onClick={handleProductsClick}
                 className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-8 py-4 rounded-full font-semibold flex items-center justify-center space-x-2 shadow-xl"
                 whileHover={{ 
                   scale: 1.05,
@@ -239,6 +267,7 @@ const HeroSection = () => {
               </motion.button>
 
               <motion.button
+                onClick={handleBrightSenseClick}
                 className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold flex items-center justify-center space-x-2 hover:border-primary-500 hover:text-primary-500 transition-colors duration-200"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

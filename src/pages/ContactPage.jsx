@@ -45,20 +45,8 @@ const ContactPage = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@seculinx.com',
+      value: 'info@seculinx.com',
       description: 'Send us an email anytime'
-    },
-    {
-      icon: Phone,
-      label: 'Phone',
-      value: '+1 (555) 123-4567',
-      description: 'Mon-Fri from 8am to 6pm PST'
-    },
-    {
-      icon: MapPin,
-      label: 'Office',
-      value: 'San Francisco, CA',
-      description: 'Come say hello at our HQ'
     }
   ];
 
@@ -289,7 +277,7 @@ const ContactPage = () => {
             {[
               {
                 question: "When will BrightSense be available?",
-                answer: "BrightSense is launching in Q4 2025. Join our waitlist to be notified about early access opportunities and launch updates."
+                answer: "BrightSense is launching in Q1 2026. Join our waitlist to be notified about early access opportunities and launch updates."
               },
               {
                 question: "Do you offer partnerships or investment opportunities?",
@@ -360,6 +348,7 @@ const ContactPage = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
+              onClick={() => window.location.href = '/brightsense'}
                 className="bg-white text-teal-600 px-8 py-4 rounded-full font-semibold inline-flex items-center space-x-2 shadow-lg"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -369,6 +358,7 @@ const ContactPage = () => {
               </motion.button>
               
               <motion.button
+              onClick={() => window.location.href = '/invest'}
                 className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-teal-600 transition-colors duration-200"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

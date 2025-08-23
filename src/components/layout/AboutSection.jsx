@@ -127,7 +127,7 @@ const AboutSection = () => {
           </motion.div>
         </div>
 
-        {/* Stats Section */}
+        {/* Stats Section
         <motion.div
           className="mt-20 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-3xl p-8 lg:p-12 text-white"
           initial={{ opacity: 0, y: 30 }}
@@ -185,7 +185,7 @@ const AboutSection = () => {
               <div className="text-white/80">Support</div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

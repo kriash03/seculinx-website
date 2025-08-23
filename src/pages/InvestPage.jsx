@@ -22,7 +22,7 @@ const InvestPage = () => {
   const products = [
     {
       name: 'BrightSense',
-      status: 'Launching Q4 2025',
+      status: 'Launching Q1 2026',
       description: 'Intelligent, zone-based lighting that adapts to presence and activity.'
     },
     {
@@ -38,7 +38,7 @@ const InvestPage = () => {
   ];
 
   const timeline = [
-    { period: 'Q4 2025', milestone: 'BrightSense Launch' },
+    { period: 'Q1 2026', milestone: 'BrightSense Launch' },
     { period: '2026', milestone: 'Ecosystem Expansion' },
     { period: '2027+', milestone: 'Global Scale' }
   ];
@@ -311,6 +311,7 @@ const InvestPage = () => {
                 <p className="text-gray-600">{product.description}</p>
                 {product.status.includes('Launching') && (
                   <motion.button
+                    onClick={() => window.location.href = '/brightsense'}
                     className="mt-6 w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-xl font-semibold"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}

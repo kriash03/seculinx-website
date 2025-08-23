@@ -6,7 +6,7 @@ const ProductEcosystem = () => {
   const products = [
     {
       name: 'BrightSense',
-      status: 'Launching Q4 2025',
+      status: 'Launching Q1 2026',
       description: 'Our flagship smart lighting system with AI-powered zone detection and adaptive brightness.',
       icon: Lightbulb,
       gradient: 'from-emerald-400 to-cyan-500',
@@ -135,6 +135,7 @@ const ProductEcosystem = () => {
                 {/* CTA Button */}
                 {product.available ? (
                   <motion.button
+                    onClick={() => window.location.href = '/brightsense'}
                     className={`w-full bg-gradient-to-r ${product.gradient} text-white py-3 px-6 rounded-xl font-semibold flex items-center justify-center space-x-2 group-hover:shadow-lg transition-shadow duration-300`}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -168,7 +169,7 @@ const ProductEcosystem = () => {
           <p className="text-gray-600 mb-6">
             Ready to transform your home into a smart ecosystem?
           </p>
-          <motion.button
+          {/* <motion.button
             className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-8 py-4 rounded-full font-semibold inline-flex items-center space-x-2 shadow-xl"
             whileHover={{ 
               scale: 1.05,
@@ -178,7 +179,7 @@ const ProductEcosystem = () => {
           >
             <span>Explore All Products</span>
             <ArrowRight className="w-5 h-5" />
-          </motion.button>
+          </motion.button> */}
         </motion.div>
       </div>
     </section>

@@ -6,28 +6,28 @@ const Footer = () => {
   const footerLinks = {
     'Company': [
       { name: 'About Us', href: '#about' },
-      { name: 'Our Mission', href: '#mission' },
-      { name: 'Careers', href: '#careers' },
-      { name: 'Press', href: '#press' }
+      // { name: 'Our Mission', href: '#mission' },
+      // { name: 'Careers', href: '#careers' },
+      // { name: 'Press', href: '#press' }
     ],
     'Products': [
       { name: 'BrightSense', href: '/brightsense' },
-      { name: 'Smart Locks', href: '#locks' },
-      { name: 'Home Sensors', href: '#sensors' },
-      { name: 'Surveillance', href: '#surveillance' }
+      // { name: 'Smart Locks', href: '#locks' },
+      // { name: 'Home Sensors', href: '#sensors' },
+      // { name: 'Surveillance', href: '#surveillance' }
     ],
     'Investors': [
       { name: 'Investment Overview', href: '/invest' },
-      { name: 'Growth Plan', href: '/invest#growth' },
-      { name: 'Market Opportunity', href: '/invest#market' },
-      { name: 'Contact Investors', href: '/contact' }
-    ],
+    //   { name: 'Growth Plan', href: '/invest#growth' },
+    //   { name: 'Market Opportunity', href: '/invest#market' },
+    //   { name: 'Contact Investors', href: '/contact' }
+     ],
     'Support': [
-      { name: 'Documentation', href: '#docs' },
-      { name: 'Help Center', href: '#help' },
+    //   { name: 'Documentation', href: '#docs' },
+    //   { name: 'Help Center', href: '#help' },
       { name: 'Contact Us', href: '/contact' },
-      { name: 'Privacy Policy', href: '#privacy' }
-    ]
+    //   { name: 'Privacy Policy', href: '#privacy' }
+     ]
   };
 
   const socialLinks = [
@@ -39,7 +39,7 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
       {/* Newsletter Section */}
-      <motion.div
+      {/* <motion.div
         className="border-b border-gray-700"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ const Footer = () => {
             </motion.div>
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
@@ -104,7 +104,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-300">
                 <Mail className="w-5 h-5 text-primary-400" />
-                <span>hello@seculinx.com</span>
+                <span>info@seculinx.com</span>
               </div>
               {/* Uncomment if phone number is needed */}
               {/* <div className="flex items-center space-x-3 text-gray-300">
@@ -176,7 +176,7 @@ const Footer = () => {
             <div className="text-gray-400 text-sm">
               © 2025 Seculinx. All rights reserved.
             </div>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            {/* <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#privacy" className="text-gray-400 hover:text-primary-400 text-sm transition-colors duration-200">
                 Privacy Policy
               </a>
@@ -186,7 +186,7 @@ const Footer = () => {
               <a href="#cookies" className="text-gray-400 hover:text-primary-400 text-sm transition-colors duration-200">
                 Cookie Policy
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </motion.div>
